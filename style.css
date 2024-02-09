@@ -1,0 +1,15 @@
+.header-custom {
+    background: rgb(26,101,177); 
+    color: white;
+}
+
+.bodyclass {
+    background: red;
+}
+
+.threeIcons {
+    border: .1rem solid white;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
