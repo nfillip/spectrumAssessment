@@ -71,3 +71,17 @@
     overflow-anchor: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
 }
+
+/* .main-div {
+    width: 100%;
+    overflow: scroll;
+}
+
+.full-div {
+    max-width: 100vw!important;
+    overflow: auto;
+}
+
+.scroll-div {
+    overflow: auto;
+} */
