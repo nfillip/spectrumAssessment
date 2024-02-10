@@ -15,14 +15,10 @@ N/A
 ---
 ## Features
 
-#### Randomize
-Randomizes a list of 10 fake accounts
-#### Filter
-Filter functionality to filter the 10 accounts based off criteria
-#### Add Contact
-Add a contact to the list of accounts
-#### Delete Contact
-Delete a contact to the list of accounts
+<u>Randomize</u> - list of 10 fake accounts
+<u>Filter</u> - Functionality to filter the 10 accounts based off criteria
+<u>Add Contact</u> - Add a contact to the list of accounts
+<u>Delete Contact</u> - Delete a contact to the list of accounts
 
 ---
 ## Website
@@ -32,8 +28,7 @@ Website Link: [https://foco-fun-ea270e6a24d7.herokuapp.com/](https://foco-fun-ea
 
 ---
 ## Video
-
-[<iframe src="https://drive.google.com/file/d/1lt1n30glA9JeZ0rLZncKIZQ72seRguio/preview" width="640" height="480"></iframe>](Screencast of Website Features)
+[<img src="./assets/screenshot.JPG" width="50%">](https://drive.google.com/file/d/1lt1n30glA9JeZ0rLZncKIZQ72seRguio/view)
 
 ---
 ## Credits
@@ -50,6 +45,10 @@ Resume: [https://docs.google.com/document/d/1rE64RknFGj4CufIDCUFSaU_fK_mV6zbNbC2
 Email: [nick.m.fillip@gmail.com](nick.m.fillip@gmail.com)
 Cell: (281) 216 - 2183
 
+
+---
+## Wireframe
+![Wireframe build](./assets/wireframe.JPG)
 
 ---
 ## License
