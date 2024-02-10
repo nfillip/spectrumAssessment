@@ -31,7 +31,7 @@
           itemprop="logo"
           src="https://www.spectruminc.com/img/logo.png"
           alt="Logo"
-          class="img-fluid"
+          class="img-fluid spectrum-img"
         />
         <button
           class="navbar-toggler"
@@ -49,32 +49,86 @@
           id="navbarNav"
         >
           <ul class="navbar-nav" id="header-ul">
-            <li class="nav-item">nfillip@spectrum.com</li>
-            <li class="nav-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="white"
-                class="bi bi-power"
-                viewBox="0 0 16 16"
-              >
-                <path d="M7.5 1v7h1V1z" />
-                <path
-                  d="M3 8.812a5 5 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812"
-                />
-              </svg>
-            </li>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                nfillip@spectrum.com
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+              </ul>
+            </div>
+
             <!-- Login and Signup Links/Buttons -->
           </ul>
         </div>
       </div>
     </nav>
-
+    <!-- MODAL ADD CONTACT -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="addContactsModal"
+      tabindex="-1"
+      aria-labelledby="addContactsModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addContactsModal">New Contact</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id = "add-contact-submit">
+              <div class  ="mb-3">
+                <label for = "recipient-name" class = "col-form-label">Name:</label>
+                <input type = "text" class="form-control" id="recipient-name" name = "name">
+              </div>
+              <div class  ="mb-3 mt-0 pt-0">
+                <label for = "recipient-number" class = "col-form-label">Phone Number:</label>
+                <input type = "text" class="form-control" id="recipient-number" name = "phoneNumber">
+              </div>
+              <div class = "mb-3">
+                <label class = "col-form-label">Lead Source</label>
+              <select class="form-select" aria-label="Default select example" name = "leadSource">
+                <option value="Organic">Organic</option>
+                <option value="Phone">Phone</option>
+                <option value="Paid">Paid</option>
+              </select>
+            </div>
+            <div class = "mb-3">
+              <label class = "col-form-label">Status</label>
+              <select class="form-select" aria-label="Activity Status" name = "status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <input type="submit" name = "submit" class="btn btn-primary" data-bs-dismiss="modal">
+            </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- CONTAINER -->
     <div class="container-fluid">
       <div class="row flex-nowrap full-div">
         <!-- SIDE BAR -->
-
         <div
           id="collapseExample"
           class="collapse collapse-horizontal col-6 col-md-6 col-lg-4 col-xl-3 px-0 pt-xxs-0 m-0 side-drawer"
@@ -448,33 +502,68 @@
             </button>
             <button class="btn bg-info">Help</button>
           </div>
-          <div class="d-flex justify-content-start">
-            <div>Contacts</div>
-            <div>Total Count 18109</div>
+          <div class="d-flex justify-content-start align-items-end m-1">
+            <div class = "contact-word">Contacts </div>
+            <div class = "contact-count" id = "total-count">Total Count: 10</div>
           </div>
           <div class="filter-line">
             <div class="filter-search">
-              <button type="button" class="btn filter-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"/>
-              </svg> Filter Contacts</button>
+              <div class="dropdown">
+              <button type="button" class="btn filter-button" data-bs-toggle = "dropdown" aria-expanded="false">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-funnel-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
+                  />
+                </svg>
+                Filter Contacts
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id = "filter-reset">Reset Filters</a></li>
+                <li><a class="dropdown-item" href="#" id = "filter-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"   >
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg></a></li>
+                <li><a class="dropdown-item" href="#" id = "filter-quote"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                  <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                </svg></a></li>
+                <li><a class="dropdown-item" href="#" id = "filter-wrench"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench" viewBox="0 0 16 16">
+                  <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z"/>
+                  </svg></a></li>
+                <li><a class="dropdown-item" href="#" id = "filter-active">Active</a></li>
+                <li><a class="dropdown-item" href="#" id = "filter-inactive">Inactive</a></li>
+              </ul>
+            </div>
               <form class="form-inline d-flex my-2 my-lg-0 search-bar">
                 <input
                   class="form-control mr-sm-2 search-bar"
                   type="search"
-                  placeholder="Search"
+                  placeholder="Search(no functionality)"
                   aria-label="Search"
                 />
-                <button
-                  class="btn search-button my-sm-0"
-                  type="submit"
-                ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-search" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
+                <button class="btn search-button my-sm-0" type="submit" disabled>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="blue"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
                 </button>
               </form>
             </div>
             <div class="add-delete-value">
-              <button class="btn add-button">
+              <button class="btn add-button" type = "button" data-bs-toggle = "modal" data-bs-target="#addContactsModal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -490,15 +579,31 @@
                 </svg>
                 Add Contact
               </button>
-              <button class="btn bg-danger delete-button text-light" id = "delete-contacts">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                  <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+              <button
+                class="btn bg-danger delete-button text-light"
+                id="delete-contacts"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-trash"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                  />
+                  <path
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                  />
                 </svg>
                 Delete Contact(s)
               </button>
-              <div class = "value-div d-flex align-items-center justify-content-between">
-                <button class="btn btn-outline-primary">
+              <div
+                class="value-div d-flex align-items-center justify-content-between"
+              >
+                <button class="btn btn-outline-primary" disabled>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -512,8 +617,8 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="btn" disabled>Value</button>
-                <button class="btn  btn-outline-primary">
+                <button type="button" class="btn" disabled id = "value-button">Value</button>
+                <button class="btn btn-outline-primary" disabled>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -528,16 +633,12 @@
                   </svg>
                 </button>
               </div>
-              
             </div>
           </div>
-          <div id = "aa"><input class="form-check-input" type="checkbox" value="" id="ffffff">
-            <label class="form-check-label" for="flexCheckDefault">
-            </label></div>
-          
+          <!-- DATA CUSTOMER TABLE -->
           <div class="scroll-div">
             <div class="table-responsive">
-              <table class="table" id = "table-id">
+              <table class="table" id="table-id">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -549,8 +650,7 @@
                     <th scope="col">Activity</th>
                   </tr>
                 </thead>
-                <tbody id="table-head">
-                </tbody>
+                <tbody id="table-head"></tbody>
               </table>
             </div>
           </div>
