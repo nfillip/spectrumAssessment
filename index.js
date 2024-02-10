@@ -94,7 +94,7 @@ for (let i =0 ; i<10; i++){
     const htmlSyntax = `<tr id = ${i}>
     <th scope="row">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input contact-checks" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
             </label>
           </div>
@@ -119,7 +119,7 @@ const rebuildDataTree = (dataSet) => {
         tableHead.append(`<tr id = ${dataSet[i].id}>
         <th scope="row">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input contact-checks" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                 </label>
               </div>
@@ -170,6 +170,7 @@ const filterData = (filterString) => {
             break;
     }
     rebuildDataTree(filteredArray);
+    $('#value-button').text(`${filteredArray.length}/${database.length}`)
 }
 
 // Add New Contact
@@ -225,30 +226,36 @@ $('#add-contact-submit').submit(function(e) {
 $("#filter-phone").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("phone")
 })
 $("#filter-wrench").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("wrench")
 })
 $("#filter-quote").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("quote")
 })
 $("#filter-active").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("active")
 })
 $("#filter-inactive").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("inactive")
 })
 $("#filter-reset").click(function (e) {
     e.preventDefault();
     e.stopPropagation();
+    $('#filter-button').dropdown("toggle");
     filterData("reset")
 })
