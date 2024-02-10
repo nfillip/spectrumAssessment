@@ -6,7 +6,8 @@ predictiveSales.click(function (e) {
     e.preventDefault();
 });
 const randomNames  = ['Nick', 'Amanda', 'Emily', 'Mark', 'Brooke', 'Kevin', 'Lucas'];
-const randomPhoneNumber = () => {
+let database = [];
+const getRandomPhoneNumber = () => {
     let phoneString = '('
     for(let i = 0; i< 11; i++){
         if(i === 3){
@@ -22,7 +23,7 @@ const randomPhoneNumber = () => {
 const getRandomName = () => {
     return randomNames[Math.floor(Math.random()* randomNames.length)]
 }
-const getStatus = () => {
+const getRandomStatus = () => {
     let status = ['Active', 'Inactive'];
     return status[Math.floor(Math.random() * 2)];
 }
@@ -36,22 +37,58 @@ const getRandomIcon = () => {
 </svg>`];
     return iconList[Math.floor(Math.random() *3)];
 }
+
+
+
 for (let i =0 ; i<10; i++){
-    tableHead.append(
-        `<tr id = "table-head">
+    const randomIcon = getRandomIcon();
+    const randomName = getRandomName();
+    const randomPhoneNumber = getRandomPhoneNumber();
+    const randomStatus = getRandomStatus();
+    const tempObject = {
+        randomIcon,
+        randomName,
+        randomPhoneNumber,
+        randomStatus,
+        htmlSyntax: `<tr>
         <th scope="row">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                 </label>
+                adsfasdfadsfdas
               </div>
+              aaaaaaa
         </th>
-        <td>${getRandomIcon()}</td>
+        <td>${randomIcon}</td>
         <td>Otto</td>
-        <td>${getRandomName()}</td>
-        <td>${randomPhoneNumber()}</td>
+        <td>${randomName}</td>
+        <td>${randomPhoneNumber}</td>
         <td>Inquiry</td>
-        <td>${getStatus()}</td>
+        <td>${randomStatus}</td>
       </tr>`
+    }
+    database.push(tempObject)
+    tableHead.append(
+        `${tempObject.htmlSyntax}`
     )
 }
+
+const deleteContacts = () => {
+    console.log($('#table-head').children().eq(0).children().eq(0).children().eq(0).children().eq(0).is(":checked"));
+    const lengthOfCustomers
+    // // for (let i = 0; i<$('#table-id').children().length(); i++){
+    //     if($('#table-id').children().eq())
+    // }
+}
+let closed = true;
+$("#collapse-button").click(function () {
+    if(closed){
+        $("#main-div").addClass("main-div-partial").removeClass("main-div-full")
+    }else{
+        $("#main-div").removeClass("main-div-partial").addClass("main-div-full")
+    }
+    closed = !closed;
+} )
+
+$("#delete-contacts").click(() => deleteContacts());
