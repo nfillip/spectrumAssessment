@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon -->
-    <link rel="icon" type="icon" href="./assets/house-door-fill.svg">
+    <link rel="icon" type="icon" href="./assets/house-door-fill.svg" />
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./styles/reset.css" />
     <!-- jquery UI LINK -->
@@ -24,7 +24,7 @@
   <body class="bodyclass">
     <!-- HEADER -->
     <nav
-      class="headerContainer navbar navbar-expand-lg navbar-light header-custom fullScreenImageNav"
+      class="headerContainer navbar navbar-expand-lg navbar-dark header-custom fullScreenImageNav"
       id="navbar"
     >
       <div class="container-fluid">
@@ -52,7 +52,12 @@
         >
           <ul class="navbar-nav" id="header-ul">
             <div class="dropdown">
-              <button class="btn dropdown-toggle text-white profile-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button
+                class="btn dropdown-toggle text-white profile-button"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 nfillip@spectrum.com
               </button>
               <ul class="dropdown-menu">
@@ -67,7 +72,6 @@
       </div>
     </nav>
     <!-- MODAL ADD CONTACT -->
-    <!-- Modal -->
     <div
       class="modal fade"
       id="addContactsModal"
@@ -87,47 +91,71 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id = "add-contact-submit">
-              <div class  ="mb-3">
-                <label for = "recipient-name" class = "col-form-label">Name:</label>
-                <input type = "text" class="form-control" id="recipient-name" name = "name">
+            <form id="add-contact-submit">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="recipient-name"
+                  name="name"
+                />
               </div>
-              <div class  ="mb-3 mt-0 pt-0">
-                <label for = "recipient-number" class = "col-form-label">Phone Number:</label>
-                <input type = "text" class="form-control" id="recipient-number" name = "phoneNumber">
+              <div class="mb-3 mt-0 pt-0">
+                <label for="recipient-number" class="col-form-label"
+                  >Phone Number:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="recipient-number"
+                  name="phoneNumber"
+                />
               </div>
-              <div class = "mb-3">
-                <label class = "col-form-label">Lead Source</label>
-              <select class="form-select" aria-label="Default select example" name = "leadSource">
-                <option value="Organic">Organic</option>
-                <option value="Phone">Phone</option>
-                <option value="Paid">Paid</option>
-              </select>
-            </div>
-            <div class = "mb-3">
-              <label class = "col-form-label">Status</label>
-              <select class="form-select" aria-label="Activity Status" name = "status">
-                <option value="Active">Active</option>
-                <option value="Inactive">Inactive</option>
-              </select>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <input type="submit" name = "submit" class="btn btn-primary" data-bs-dismiss="modal">
-            </div>
+              <div class="mb-3">
+                <label class="col-form-label">Lead Source</label>
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  name="leadSource"
+                >
+                  <option value="Organic">Organic</option>
+                  <option value="Phone">Phone</option>
+                  <option value="Paid">Paid</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="col-form-label">Status</label>
+                <select
+                  class="form-select"
+                  aria-label="Activity Status"
+                  name="status"
+                >
+                  <option value="Active">Active</option>
+                  <option value="Inactive">Inactive</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <input
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                />
+              </div>
             </form>
           </div>
-          
         </div>
       </div>
     </div>
-    <!-- CONTAINER -->
+    <!-- DISPLAY SECTION -->
     <div class="container-fluid">
       <div class="row flex-nowrap full-div">
         <!-- SIDE BAR -->
@@ -168,7 +196,7 @@
               <a
                 class="threeIcons"
                 href="https://nick-fillip-portfolio.netlify.app/"
-                target = "_blank"
+                target="_blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +211,11 @@
                   />
                 </svg>
               </a>
-              <a class="threeIcons">
+              <a
+                class="threeIcons"
+                href="https://www.spectruminc.com/contact-us/"
+                target="_blank"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -215,8 +247,9 @@
               </svg>
               <span class="mx-2 d-sm-inline">Predictive Sales AI</span>
             </button>
-            <!-- Settings -->
+            <!-- Accordion -->
             <div class="accordion" id="accordionExample" style="width: 100%">
+              <!-- Settings -->
               <div class="accordion-item" style="width: 100%">
                 <h2 class="accordion-header" style="width: 100%">
                   <button
@@ -325,6 +358,7 @@
                   <div class="accordion-body">More Audits</div>
                 </div>
               </div>
+              <!-- Contact Manager -->
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button
@@ -479,71 +513,149 @@
           class="col-6 col-md-6 col-lg-8 col-xl-7 py-3 main-div-full"
           id="main-div"
         >
-        <button
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-              class="btn drawer-button"
-              id="collapse-button"
+        <!-- drawer pullout button -->
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            class="btn drawer-button"
+            id="collapse-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="white"
+              class="bi bi-arrows-expand-vertical"
+              viewBox="0 0 16 16"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="white"
-                class="bi bi-arrows-expand-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"
-                />
-              </svg>
-              Side Bar
-            </button>
+              <path
+                d="M8 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"
+              />
+            </svg>
+            Side Bar
+          </button>
+          <!-- help button -->
           <div class="d-flex justify-content-end">
-            <button class="btn help-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill mb-1" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-            </svg> Help</button>
-          </div>
-          <div class="d-flex justify-content-start align-items-end m-1">
-            <div class = "contact-word">Contacts </div>
-            <div class = "contact-count" id = "total-count">Total Count: 10</div>
-          </div>
-          <div class="filter-line">
-            <div class="filter-search">
-              <div class="dropdown">
-              <button type="button" class="btn filter-button dropdown-toggle" data-bs-toggle = "dropdown" aria-expanded="false" id = "filter-button">
+            <a href="https://www.spectruminc.com/contact-us/" target="_blank"
+              ><button class="btn help-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-funnel-fill"
+                  class="bi bi-question-circle-fill mb-1"
                   viewBox="0 0 16 16"
                 >
                   <path
-                    d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"
                   />
                 </svg>
-                Filter Contacts
-              </button>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item"><a class="dropdown-item" href="#" id = "filter-reset">Reset Filters</a></li>
-                <li><a class="dropdown-item" href="#" id = "filter-phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"   >
-                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                </svg></a></li>
-                <li><a class="dropdown-item" href="#" id = "filter-quote"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
-                  <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
-                </svg></a></li>
-                <li><a class="dropdown-item" href="#" id = "filter-wrench"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench" viewBox="0 0 16 16">
-                  <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z"/>
-                  </svg></a></li>
-                <li><a class="dropdown-item" href="#" id = "filter-active">Active</a></li>
-                <li><a class="dropdown-item" href="#" id = "filter-inactive">Inactive</a></li>
-              </ul>
-            </div>
+                Help
+              </button></a
+            >
+          </div>
+          <!-- Total Count -->
+          <div class="d-flex justify-content-start align-items-end m-1">
+            <div class="contact-word">Contacts</div>
+            <div class="contact-count" id="total-count">Total Count: 10</div>
+          </div>
+          <!-- Filter/Search/Contact/Delete Sectino -->
+          <div class="filter-line">
+            <div class="filter-search">
+              <!-- Filter Contacts -->
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn filter-button dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="filter-button"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-funnel-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
+                    />
+                  </svg>
+                  Filter Contacts
+                </button>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a class="dropdown-item" href="#" id="filter-reset"
+                      >Reset Filters</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="filter-phone"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-telephone-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="filter-quote"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-quote"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="filter-wrench"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-wrench"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="filter-active"
+                      >Active</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" id="filter-inactive"
+                      >Inactive</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Search Bar -->
               <form class="form-inline d-flex my-2 my-lg-0 search-bar">
                 <input
                   class="form-control mr-sm-2 search-bar"
@@ -551,7 +663,11 @@
                   placeholder="Search(no functionality)"
                   aria-label="Search"
                 />
-                <button class="btn search-button my-sm-0" type="submit" disabled>
+                <button
+                  class="btn search-button my-sm-0"
+                  type="submit"
+                  disabled
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -568,7 +684,13 @@
               </form>
             </div>
             <div class="add-delete-value">
-              <button class="btn add-button" type = "button" data-bs-toggle = "modal" data-bs-target="#addContactsModal">
+              <!-- Add Contacts Button -->
+              <button
+                class="btn add-button"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addContactsModal"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -584,8 +706,9 @@
                 </svg>
                 Add Contact
               </button>
+              <!-- Delete Contacts Button -->
               <button
-              type = "button"
+                type="button"
                 class="btn btn-danger delete-button"
                 id="delete-contacts"
               >
@@ -606,6 +729,7 @@
                 </svg>
                 Delete Contact(s)
               </button>
+              <!-- Page Number -->
               <div
                 class="value-div d-flex align-items-center justify-content-between"
               >
@@ -623,7 +747,9 @@
                     />
                   </svg>
                 </button>
-                <button type="button" class="btn" disabled id = "value-button">10/10</button>
+                <button type="button" class="btn" disabled id="value-button">
+                  10/10
+                </button>
                 <button class="btn btn-outline-primary" disabled>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -649,11 +775,87 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">?</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Activity</th>
+                    <th scope="col" class="dropdown">
+                      <div
+                        class="dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Date
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li class= "sort-item"><a class="dropdown-item sort-item" href="#">Sort Ascending</a></li>
+                        <li>
+                          <a class="dropdown-item sort-item" href="#">Sort Descending</a>
+                        </li class = "sort-item">
+                      </ul>
+                    </th>
+                    <th scope="col" class="dropdown">
+                      <div
+                        class="dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Name
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li class= "sort-item"><a class="dropdown-item sort-item" href="#">Sort Ascending</a></li>
+                        <li>
+                          <a class="dropdown-item sort-item" href="#">Sort Descending</a>
+                        </li class = "sort-item">
+                      </ul>
+                    </th>
+                    <th scope="col" class="dropdown">
+                      <div
+                        class="dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Phone
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li class= "sort-item"><a class="dropdown-item sort-item" href="#">Sort Ascending</a></li>
+                        <li>
+                          <a class="dropdown-item sort-item" href="#">Sort Descending</a>
+                        </li class = "sort-item">
+                      </ul>
+                    </th>
+                    <th scope="col" class="dropdown">
+                      <div
+                        class="dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Status
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li class= "sort-item"><a class="dropdown-item sort-item" href="#">Sort Ascending</a></li>
+                        <li>
+                          <a class="dropdown-item sort-item" href="#">Sort Descending</a>
+                        </li class = "sort-item">
+                      </ul>
+                    </th>
+                    <th scope="col" class="dropdown">
+                      <div
+                        class="dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Activity
+                      </div>
+                      <ul class="dropdown-menu">
+                        <li class= "sort-item"><a class="dropdown-item sort-item" href="#">Sort Ascending</a></li>
+                        <li>
+                          <a class="dropdown-item sort-item" href="#">Sort Descending</a>
+                        </li class = "sort-item">
+                      </ul>
+                    </th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody id="table-head"></tbody>
