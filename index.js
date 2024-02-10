@@ -193,6 +193,7 @@ const addContact = (formData) => {
   });
   rebuildDataTree(database);
   $("#total-count").text(`Total Count: ${database.length}`);
+  $("#value-button").text(`${database.length}/${database.length}`);
 };
 
 // Delete Existing Contact from DOM tree and database variable
@@ -215,6 +216,7 @@ const deleteContacts = () => {
       });
       tableHead.children().eq(i).remove();
       $("#total-count").text(`Total Count: ${database.length}`);
+      $("#value-button").text(`${database.length}/${database.length}`);
       i--;
     }
   }
