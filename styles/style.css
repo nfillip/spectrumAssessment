@@ -229,7 +229,7 @@
   border: 0.1rem solid rgb(20, 81, 142);
   border-top: none;
 }
-.dropdown-toggle:hover {
+.dropdown-table-name:hover {
   text-decoration: underline;
 }
 .contact-checks:hover {
@@ -260,10 +260,10 @@
     font-size: 1.5rem;
 }
 .total-count {
-  overflow: none;
+  overflow: visible;
 }
 .filter-line {
-  overflow: none;
+  overflow: visible;
 }
 .main-div-partial {
   max-width: 65vw;
@@ -310,5 +310,6 @@
   .full-div {
     overflow:none;
   }
+
 }
 
