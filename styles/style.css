@@ -120,7 +120,7 @@
 .main-div-partial {
   min-height: 100vh;
   width: 100%;
-  max-width: 70vw;
+  max-width: 73vw;
   position: relative;
 }
 
@@ -220,7 +220,9 @@
   border: 0.1rem solid rgb(20, 81, 142);
   border-top: none;
 }
-
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
 .contact-checks:hover {
   cursor: pointer;
   border: 0.1rem solid rgb(12, 86, 160);
@@ -230,6 +232,9 @@
   background-color: rgb(93, 142, 166);
 }
 
+.add-on-dropdown:hover {
+  border: .1rem solid rgb(12, 86, 160)
+}
 /* MEDIA QUERIES */
 @media (width>800px) {
   .filter-line {
