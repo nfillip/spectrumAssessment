@@ -8,9 +8,14 @@ Wireframe of Spectrum's Customer Relationship Management package.
 The site is a quick wireframe for Spectrum's CRM software. The site has a collapsible sidebar, table, filer function, add function, and delete function. The site is responsive to all viewports. I thought the initial design given by Spectrum was too bland, so I added color and reorganized some buttons. 
 
 ---
-## Installation
+## What I Improved
 
-N/A
+* Side Drawer is now collapsible
+* Header has sandwich icon in mobile
+* Table is on auto scroll which is helpful for mobile.
+* Added color schemes to buttons for a better pop
+* Added pseudo-classes with CSS on all buttons to make the page less stagnant
+* Footer added
 
 ---
 ## Features
